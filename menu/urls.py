@@ -23,9 +23,21 @@ from django.conf.urls.static import static
 admin_urls = [
     path('admin/user/',
          include(('user.urls.admin', 'menu.user'), namespace='users-admin')),
+    path('admin/media/',
+         include(('media.urls.admin', 'menu.media'), namespace='media-admin')),
+    path('admin/product/',
+         include(('product.urls.admin', 'menu.product'), namespace='product-admin')),
+    path('admin/siteSetting/',
+         include(('siteSetting.urls.admin', 'menu.siteSetting'), namespace='siteSetting-admin')),
 ]
 
 front_urls = [
+    path('front/media/',
+         include(('media.urls.front', 'menu.media'), namespace='media-front')),
+    path('front/product/',
+         include(('product.urls.front', 'menu.product'), namespace='product-front')),
+    path('front/siteSetting/',
+         include(('siteSetting.urls.front', 'menu.siteSetting'), namespace='siteSetting-front'))
 ]
 
 doc_patterns = [
