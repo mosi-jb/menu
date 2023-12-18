@@ -62,7 +62,7 @@ ROOT_URLCONF = 'menu.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'reactapp/build')]
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -141,6 +141,3 @@ AUTH_USER_MODEL = 'user.User'
 MEDIA_ROOT = 'uploads/'
 MEDIA_URL = 'medias/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'reactapp/build/static')
-]
