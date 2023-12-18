@@ -19,6 +19,7 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import Index
 
 admin_urls = [
     path('admin/user/',
@@ -50,6 +51,7 @@ doc_patterns = [
 
 urlpatterns = [
                   path('akm/', admin.site.urls),
+                  path('', Index, name='index'),
               ] + doc_patterns + admin_urls + front_urls
 
 if settings.DEBUG:
